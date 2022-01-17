@@ -2,8 +2,11 @@ import "./styles.css";
 import React from "react";
 import Login from "./components/Login";
 
+//
+var userisRegistered = false;
+
 //first way
-var isLoggedIn;
+// var isLoggedIn;
 
 // function renderConditionally() {
 //   if (isLoggedIn === true) {
@@ -25,7 +28,7 @@ export default function App() {
         // )
 
         //using && and op in react fisrt expression is true then run otherwise not
-        (isLoggedIn = true && <Login title="Login User" btn1="Login" />)
+        (isLoggedIn = true && <Login isRegistered={userisRegistered} />)
       }
     </div>
   );
